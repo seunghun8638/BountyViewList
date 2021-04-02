@@ -16,6 +16,7 @@
 		E6C27CFC25CC1AD3008CD6DB /* pleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C27CFB25CC1AD3008CD6DB /* pleaseTests.swift */; };
 		E6C27D0725CC1AD3008CD6DB /* pleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C27D0625CC1AD3008CD6DB /* pleaseUITests.swift */; };
 		E6D983FF261495730026CCA3 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D983FE261495730026CCA3 /* BountyViewController.swift */; };
+		E6D98404261738630026CCA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D98403261738630026CCA3 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E6C27D0625CC1AD3008CD6DB /* pleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pleaseUITests.swift; sourceTree = "<group>"; };
 		E6C27D0825CC1AD3008CD6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D983FE261495730026CCA3 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
+		E6D98403261738630026CCA3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E6C27CE725CC1AD0008CD6DB /* Main.storyboard */,
 				E6D983FE261495730026CCA3 /* BountyViewController.swift */,
 				E6C27CED25CC1AD2008CD6DB /* Assets.xcassets */,
+				E6D98403261738630026CCA3 /* DetailViewController.swift */,
 				E6C27CEF25CC1AD2008CD6DB /* LaunchScreen.storyboard */,
 				E6C27CF225CC1AD2008CD6DB /* Info.plist */,
 				E6C27CEA25CC1AD0008CD6DB /* please.xcdatamodeld */,
@@ -263,6 +266,7 @@
 			files = (
 				E6C27CEC25CC1AD0008CD6DB /* please.xcdatamodeld in Sources */,
 				E6D983FF261495730026CCA3 /* BountyViewController.swift in Sources */,
+				E6D98404261738630026CCA3 /* DetailViewController.swift in Sources */,
 				E6C27CE225CC1AD0008CD6DB /* AppDelegate.swift in Sources */,
 				E6C27CE425CC1AD0008CD6DB /* SceneDelegate.swift in Sources */,
 			);
