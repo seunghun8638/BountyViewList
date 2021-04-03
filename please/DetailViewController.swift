@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController : UIViewController {
     
+    
     @IBOutlet weak  var imagView: UIImageView!
     @IBOutlet weak  var nameLabel: UILabel!
     @IBOutlet weak  var bountyLabel: UILabel!
@@ -16,6 +17,7 @@ class DetailViewController : UIViewController {
     var name : String?
     var bounty : Int?
     
+    //정보를 받아 Detailviewcontroller 수행 하고 updateUI 실행
     override func viewDidLoad() {
         super.viewDidLoad()
         // 보이기 바로 직전 호출
@@ -23,6 +25,7 @@ class DetailViewController : UIViewController {
     }
     
     //뷰컨트롤러에서 넘어올때 데이터가 가지고 있다면 Ui컴포넌트에 넣을 수 있다.
+    //받아온 정보를 받아 정리하여 updateUI를 실행
     func updateUI() {
         if let name = self.name, let bounty = self.bounty{
             imagView.image = UIImage(named: "\(name).jpg")

@@ -12,19 +12,24 @@ class BountyViewController : UIViewController, UITableViewDataSource,UITableView
     //커스텀 셀에 들어갈 데이터
     let nameList = ["brook","chopper","franky","luffy","nami","robin","sanji","zoro"]
     let bountyList = [33000000,50,44000000,300000000,16000000,8000000,7700000,120000000]
-//    let nameBountyList = ["brook":3300000,"chopper" : 50 ,"franky" : 3000000,"luffy" : 160000000,"nami":8000000,"robin":77000000,"sanji":7400000,"zoro": 12000000]
-    //세그웨이 보낼려고 하는 직전에  준비하는 함수
-    override func prepare(for seque: UIStoryboardSegue,sender : Any?){
-        //DetailViewController 데이터 줄꺼야
-        if seque.identifier == "showDetail" {
-            let vc = seque.destination as? DetailViewController //sender가 넣어준 숫자를 이용해서 nameList 순서에 해당하는걸 detailView로 넘긴다.
-            if let index = sender as? Int {
+
+    //기존의 있는 함수여서 override하여 변경
+    //seque보내기 직전에 준비 할때 보낼껄 작성하면 된다.
+    //이때, detailviewcontroller에게 데이터를 줄거다
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"{ //segue인데 showdeatil를 보여줄 때,
+            //세그웨이 destiantuon -> Viewcontroller -> DetailViewcontroller 임으로
+            let vc = segue.destination as? DetailViewController
+            //name,bounty 데이터를 넘겨주고 싶은거
+            //그래서 몇번 째 인지를 보내야되니.
+            //sender가 위에 any? 옵셔널인데 그걸 int(몇번째를 알아야되기 땜에) 다운 캐스팅
+            if let index = sender as? Int{
+                //있으니깐 nameList에 몇번쨰이다라고 보여줌
                 vc?.name = nameList[index]
                 vc?.bounty = bountyList[index]
             }
-           
         }
-    }
+    }//perfomSegue를 보내기 직전에 준비한다.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,7 +75,7 @@ class BountyViewController : UIViewController, UITableViewDataSource,UITableView
         //눌렀을 때 연동(세그웨이 : showDetail)
         // 수행해라 performseque
         //showDetail를 이용하여 넘기면 sender-> 넘길것 따로 없으면 nil
-        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row) //indexPath.row -> 몇번 쨰 셀이 클릭 되는지 알 수 있다. 그래서 indexPath.row 데이터를 보냄
         //sender를 이용해서 정보를 보낼 수 있다.
         //정보를 보내는 시점에 그 정보를 가지고 위로 올라간다.
     }
