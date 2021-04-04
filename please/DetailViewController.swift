@@ -29,8 +29,9 @@ class DetailViewController : UIViewController {
     
 //    var name : String?
 //    var bounty : Int?
-    var bountyInfo : BountyInfo?
+//    var bountyInfo : BountyInfo?
     
+    let viewModel = DetailViewModel()
     //정보를 받아 Detailviewcontroller 수행 하고 updateUI 실행
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,7 @@ class DetailViewController : UIViewController {
     //뷰컨트롤러에서 넘어올때 데이터가 가지고 있다면 Ui컴포넌트에 넣을 수 있다.
     //받아온 정보를 받아 정리하여 updateUI를 실행
     func updateUI() {
-        if let bountyInfo = self.bountyInfo {
+        if let bountyInfo = viewModel.bountyInfo {
             imagView.image = bountyInfo.image
             nameLabel.text = bountyInfo.name
             bountyLabel.text = "\(bountyInfo.bounty)"
@@ -63,3 +64,13 @@ class DetailViewController : UIViewController {
     
     
 }
+
+class DetailViewModel {
+    var bountyInfo : BountyInfo?
+    
+    func update(model : BountyInfo?) {
+        bountyInfo = model
+    }
+    
+}
+
