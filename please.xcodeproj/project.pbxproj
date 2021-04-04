@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E62F29A526195713008EFB14 /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62F29A426195713008EFB14 /* BountyInfo.swift */; };
 		E6C27CE225CC1AD0008CD6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C27CE125CC1AD0008CD6DB /* AppDelegate.swift */; };
 		E6C27CE425CC1AD0008CD6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C27CE325CC1AD0008CD6DB /* SceneDelegate.swift */; };
 		E6C27CE925CC1AD0008CD6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C27CE725CC1AD0008CD6DB /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E62F29A426195713008EFB14 /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 		E6C27CDE25CC1AD0008CD6DB /* please.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = please.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C27CE125CC1AD0008CD6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6C27CE325CC1AD0008CD6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				E6C27CE325CC1AD0008CD6DB /* SceneDelegate.swift */,
 				E6C27CE725CC1AD0008CD6DB /* Main.storyboard */,
 				E6D983FE261495730026CCA3 /* BountyViewController.swift */,
+				E62F29A426195713008EFB14 /* BountyInfo.swift */,
 				E6C27CED25CC1AD2008CD6DB /* Assets.xcassets */,
 				E6D98403261738630026CCA3 /* DetailViewController.swift */,
 				E6C27CEF25CC1AD2008CD6DB /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				E6D983FF261495730026CCA3 /* BountyViewController.swift in Sources */,
 				E6D98404261738630026CCA3 /* DetailViewController.swift in Sources */,
 				E6C27CE225CC1AD0008CD6DB /* AppDelegate.swift in Sources */,
+				E62F29A526195713008EFB14 /* BountyInfo.swift in Sources */,
 				E6C27CE425CC1AD0008CD6DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

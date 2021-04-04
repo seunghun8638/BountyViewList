@@ -70,7 +70,7 @@ class DetailViewModel {
     
     func update(model : BountyInfo?) {
         bountyInfo = model
-    }
     
 }
 
+}

@@ -130,20 +130,7 @@ class ListCell : UITableViewCell {
 //리펙터링 /,MVVM찾기
 //Model -> 현상금에 대한 정보를
 //BountInfo 만들기(정보를 하나로 만들기)
-struct BountyInfo {
-    let name : String
-    let bounty : Int
-    
-    
-    var image : UIImage? {
-        return UIImage(named: "\(name).jpg")
-    }
-    
-    init(name : String , bounty : Int) {
-        self.name = name
-        self.bounty = bounty
-    }
-}
+
 
 //View -> 현상금 관련 정보를 보여줌
 //ListCell -> 필요한 정보를 ViewModel한테서 받아야겠다.
