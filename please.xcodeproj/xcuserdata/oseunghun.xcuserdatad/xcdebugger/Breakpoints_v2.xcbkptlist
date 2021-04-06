@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FB051258-C6B4-4DDB-BD57-D42AA4B3D3EE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C95DC8A-483A-4C55-9EF9-91A4308F4BC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "please/BountyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "ListCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "please/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - e243b1e2017ba01e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.imagView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - 514d377e5e3b540a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.imagView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - 243aa5b9352f73a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.imagView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - 808b9aa6d8c2e380"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.imagView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - d672f88a74d9b3f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; please.DetailViewController"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "423DD16A-74AD-4E7D-AE62-90261F28D32E - 9009b1979c49618d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "please.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;please.DetailViewController&gt;"
+                  moduleName = "please"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oseunghun/Desktop/swift/BountyList/please/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "221">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
