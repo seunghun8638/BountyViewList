@@ -7,8 +7,33 @@
 
 import UIKit
 
-class BountyViewController : UIViewController, UITableViewDataSource,UITableViewDelegate{
+class BountyViewController : UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
  
+    //UICollectionViewDataSource -> 몇개를 보여줄까요? , 셀은 어떻게 표현할까요?
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numOfBountyInfoList
+    }
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCell", for: indexPath) as? GridCell{
+            let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
+            cell.update(info: bountyInfo)
+            return cell
+            
+        }
+        else{
+            return UICollectionViewCell()
+        }
+        
+    }
+    //UICollectionViewDelegate -> 셀이 클릭되었을 떄 어쩔까요?
+    
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        print("-->\(indexPath.item)")
+        performSegue(withIdentifier: "showDetail", sender: indexPath.item)
+        
+    }
+    //UICollectionViewDelegateFlowLayout -> 셀 사이즈를 계산(목표 : 다양한 디바이스에서 일관적인 디자인을 보여주기 위해)
+   
     //하단 bountyinfo 이용
 //    let bountyInfoList : [BountyInfo] = [
 //        BountyInfo(name: "brook",bounty: 3300000),
@@ -59,60 +84,60 @@ class BountyViewController : UIViewController, UITableViewDataSource,UITableView
         
     
     
-    //TableVIew-> DataSource와 Delegate를 BountyViewController에 연결시켜 연동되게 하여 화면에 보여지도록 합니다.
-    //UITableVIewDataSource -> 필수
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numOfBountyInfoList
-        //        return bountyInfoList.count
-//        return nameList.count
-        //boutList 갯수 만큼
-    }
-    //UITableVIewDataSource -> 필수
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //ListCell 사용위해 추가 as-> 캐스팅  옵셔널이 될 수 있으니 캐스팅이 안된경우에는 UITableViewCell 넘기도록
-        //guard 문 ->  Listcell로 캐스팅한 결과 cell이 nil이 아닌 겨우에 밑으로 코드 수행하고 그렇지 않은 경우에 UITableView로 넘김
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else{
+//    //TableVIew-> DataSource와 Delegate를 BountyViewController에 연결시켜 연동되게 하여 화면에 보여지도록 합니다.
+//    //UITableVIewDataSource -> 필수
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return viewModel.numOfBountyInfoList
+//        //        return bountyInfoList.count
+////        return nameList.count
+//        //boutList 갯수 만큼
+//    }
+//    //UITableVIewDataSource -> 필수
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        //ListCell 사용위해 추가 as-> 캐스팅  옵셔널이 될 수 있으니 캐스팅이 안된경우에는 UITableViewCell 넘기도록
+//        //guard 문 ->  Listcell로 캐스팅한 결과 cell이 nil이 아닌 겨우에 밑으로 코드 수행하고 그렇지 않은 경우에 UITableView로 넘김
+////        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else{
+////            return UITableViewCell()
+////        }
+//        //상단 가드문과 if문과 동일
+//        //차이는 가드문 띄어쓰기가 한번 더 안들어감
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell {
+//
+//            //bounyInfo를 이용
+//
+////            let bountyInfo = bountyInfoList[indexPath.row]
+//            let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
+//            cell.update(info: bountyInfo)
+////            cell.imagView.image = bountyInfo.image
+////            cell.nameLabel.text = bountyInfo.name
+////            cell.bountyLabel.text = "\(bountyInfo.bounty)"
+////
+////            let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
+////            cell.imagView.image = img
+////            cell.nameLabel.text = nameList[indexPath.row]
+////            cell.bountyLabel.text = "\(bountyList[indexPath.row])"
+//
+//            return cell
+//        }
+//        else{
 //            return UITableViewCell()
 //        }
-        //상단 가드문과 if문과 동일
-        //차이는 가드문 띄어쓰기가 한번 더 안들어감
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell {
-            
-            //bounyInfo를 이용
-            
-//            let bountyInfo = bountyInfoList[indexPath.row]
-            let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
-            cell.update(info: bountyInfo)
-//            cell.imagView.image = bountyInfo.image
-//            cell.nameLabel.text = bountyInfo.name
-//            cell.bountyLabel.text = "\(bountyInfo.bounty)"
+////        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        //indexPath -> cell위치를 표시
 //
-//            let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
-//            cell.imagView.image = img
-//            cell.nameLabel.text = nameList[indexPath.row]
-//            cell.bountyLabel.text = "\(bountyList[indexPath.row])"
-            
-            return cell
-        }
-        else{
-            return UITableViewCell()
-        }
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //indexPath -> cell위치를 표시
-        
-        //checkpoint -> 악세사리
-    }
-    //UITableVIewDelegate -> 눌럿을 때 출력창에 나옴(선택)
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("--->\(indexPath.row)")
-        //눌렀을 때 연동(세그웨이 : showDetail)
-        // 수행해라 performseque
-        //showDetail를 이용하여 넘기면 sender-> 넘길것 따로 없으면 nil
-        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
-        //indexPath.row -> 몇번 쨰 셀이 클릭 되는지 알 수 있다. 그래서 indexPath.row 데이터를 보냄
-        //sender를 이용해서 정보를 보낼 수 있다.
-        //정보를 보내는 시점에 그 정보를 가지고 위로 올라간다.
-    }
+//        //checkpoint -> 악세사리
+//    }
+//    //UITableVIewDelegate -> 눌럿을 때 출력창에 나옴(선택)
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("--->\(indexPath.row)")
+//        //눌렀을 때 연동(세그웨이 : showDetail)
+//        // 수행해라 performseque
+//        //showDetail를 이용하여 넘기면 sender-> 넘길것 따로 없으면 nil
+//        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+//        //indexPath.row -> 몇번 쨰 셀이 클릭 되는지 알 수 있다. 그래서 indexPath.row 데이터를 보냄
+//        //sender를 이용해서 정보를 보낼 수 있다.
+//        //정보를 보내는 시점에 그 정보를 가지고 위로 올라간다.
+//    }
 }
  //custom cell
 class ListCell : UITableViewCell {
@@ -139,11 +164,12 @@ class ListCell : UITableViewCell {
 //ViewModel
 //bountyViewModel 만들기 - View에서 필요한 메서드 만들기
 //Model 가지고 있기 ->bounty info 를 가지고 있어야 한다.
+//수정해서 앱 전반에 영향을 미친다
 class BountyViewModel {
     
     let bountyInfoList : [BountyInfo] = [
         BountyInfo(name: "brook",bounty: 3300000),
-        BountyInfo(name: "chopper",bounty: 500),
+        BountyInfo(name: "chopper",bounty: 50),
         BountyInfo(name: "franky",bounty: 5500000),
         BountyInfo(name: "luffy",bounty: 30000000),
         BountyInfo(name: "nami",bounty: 1600000),
@@ -152,11 +178,31 @@ class BountyViewModel {
         BountyInfo(name: "zoro",bounty: 12000000)
         
     ]
+    //bounty 비교후 큰걸 앞으로
+    var sortedList : [BountyInfo] {
+       let sortedList =  bountyInfoList.sorted {
+            prev,next in return prev.bounty > next.bounty
+        }
+        return sortedList
+    }
     //bountInfoList 갯수
     var numOfBountyInfoList : Int {
         return bountyInfoList.count
     }
     func bountyInfo(at index : Int) -> BountyInfo{
-        return bountyInfoList[index]
+        return sortedList[index]
+    }
+}
+
+class GridCell : UICollectionViewCell {
+    //custom cell 추가 3개
+    @IBOutlet weak  var imagView: UIImageView!
+    @IBOutlet weak  var nameLabel: UILabel!
+    @IBOutlet weak  var bountyLabel: UILabel!
+    
+    func update(info : BountyInfo){
+        imagView.image = info.image
+        nameLabel.text = info.name
+        bountyLabel.text = "\(info.bounty)"
     }
 }
