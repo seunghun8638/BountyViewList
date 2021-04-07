@@ -33,7 +33,16 @@ class BountyViewController : UIViewController,UICollectionViewDataSource,UIColle
         
     }
     //UICollectionViewDelegateFlowLayout -> 셀 사이즈를 계산(목표 : 다양한 디바이스에서 일관적인 디자인을 보여주기 위해)
-   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //컬렉션뷰셀 간 위아래,양옆 간격
+        let itemSpacing : CGFloat = 10
+        
+        let textAreaHeight : CGFloat = 85
+
+        let width : CGFloat = (collectionView.bounds.width - itemSpacing) / 2 //현재 width에서 -itemspacing을 뺴고 / 2
+        let height : CGFloat = width * 10/7 + textAreaHeight
+        return CGSize(width: width, height: height)
+    }
     //하단 bountyinfo 이용
 //    let bountyInfoList : [BountyInfo] = [
 //        BountyInfo(name: "brook",bounty: 3300000),
