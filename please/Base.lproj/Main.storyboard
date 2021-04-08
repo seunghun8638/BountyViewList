@@ -116,15 +116,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-Sc-Lvi">
                                 <rect key="frame" x="50" y="100" width="314" height="451"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-Cm-TEr">
-                                <rect key="frame" x="50" y="649" width="324" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-g9-1gp">
+                                <rect key="frame" x="171.5" y="580" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-g9-1gp">
-                                <rect key="frame" x="35" y="617" width="344" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-Cm-TEr">
+                                <rect key="frame" x="171.5" y="615" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -132,25 +132,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mm5-Sc-Lvi" firstAttribute="leading" secondItem="oIA-9K-VUz" secondAttribute="leading" constant="50" id="0ap-IW-SYj"/>
-                            <constraint firstItem="Jkn-g9-1gp" firstAttribute="top" secondItem="mm5-Sc-Lvi" secondAttribute="bottom" constant="66" id="5Ul-vy-pQF"/>
-                            <constraint firstItem="oIA-9K-VUz" firstAttribute="trailing" secondItem="uN7-Cm-TEr" secondAttribute="trailing" constant="40" id="AvI-5P-wDn"/>
-                            <constraint firstItem="uN7-Cm-TEr" firstAttribute="top" secondItem="mm5-Sc-Lvi" secondAttribute="bottom" constant="98" id="Bfs-7c-6QR"/>
+                            <constraint firstItem="Jkn-g9-1gp" firstAttribute="top" secondItem="mm5-Sc-Lvi" secondAttribute="top" constant="480" id="Ihy-BZ-hms"/>
                             <constraint firstItem="oIA-9K-VUz" firstAttribute="bottom" secondItem="mm5-Sc-Lvi" secondAttribute="bottom" constant="257" id="Jnh-4R-XO5"/>
-                            <constraint firstItem="uN7-Cm-TEr" firstAttribute="leading" secondItem="oIA-9K-VUz" secondAttribute="leading" constant="50" id="KYz-ZY-pqy"/>
-                            <constraint firstItem="Jkn-g9-1gp" firstAttribute="leading" secondItem="oIA-9K-VUz" secondAttribute="leading" constant="35" id="PRE-b5-avJ"/>
-                            <constraint firstItem="uN7-Cm-TEr" firstAttribute="top" secondItem="Jkn-g9-1gp" secondAttribute="bottom" constant="8" symbolic="YES" id="XmD-jq-V9l"/>
                             <constraint firstItem="6ej-ch-Xh2" firstAttribute="top" secondItem="oIA-9K-VUz" secondAttribute="top" constant="20" id="ZLe-Rg-GZU"/>
-                            <constraint firstItem="oIA-9K-VUz" firstAttribute="bottom" secondItem="uN7-Cm-TEr" secondAttribute="bottom" constant="126" id="h3V-8X-jzA"/>
+                            <constraint firstItem="Jkn-g9-1gp" firstAttribute="centerX" secondItem="mm5-Sc-Lvi" secondAttribute="centerX" id="bvJ-4F-JYQ"/>
+                            <constraint firstItem="uN7-Cm-TEr" firstAttribute="centerX" secondItem="Jkn-g9-1gp" secondAttribute="centerX" id="eJf-1C-q2e"/>
                             <constraint firstItem="oIA-9K-VUz" firstAttribute="trailing" secondItem="mm5-Sc-Lvi" secondAttribute="trailing" constant="50" id="hmS-lO-wOk"/>
                             <constraint firstItem="mm5-Sc-Lvi" firstAttribute="top" secondItem="6ej-ch-Xh2" secondAttribute="bottom" constant="30" id="lxt-pA-kyy"/>
-                            <constraint firstItem="oIA-9K-VUz" firstAttribute="trailing" secondItem="Jkn-g9-1gp" secondAttribute="trailing" constant="35" id="naE-6X-i15"/>
                             <constraint firstItem="oIA-9K-VUz" firstAttribute="trailing" secondItem="6ej-ch-Xh2" secondAttribute="trailing" constant="16" id="nuN-cQ-XKD"/>
+                            <constraint firstItem="uN7-Cm-TEr" firstAttribute="top" secondItem="Jkn-g9-1gp" secondAttribute="top" constant="35" id="qZL-O8-KRh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bountyLabel" destination="uN7-Cm-TEr" id="yyX-pO-7tZ"/>
+                        <outlet property="bountyLabelCenterX" destination="eJf-1C-q2e" id="UOK-cx-0ah"/>
                         <outlet property="imagView" destination="mm5-Sc-Lvi" id="UBd-kd-BCU"/>
                         <outlet property="nameLabel" destination="Jkn-g9-1gp" id="niQ-Yc-TJ4"/>
+                        <outlet property="nameLabelCenterX" destination="bvJ-4F-JYQ" id="8V7-SV-sFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2y-2o-Krn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
